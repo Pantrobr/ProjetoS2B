@@ -13,6 +13,7 @@ namespace eCommerceS2B_2016.Models
         #endregion
 
         #region "Construtores"
+        public Vendas() { }
         /// <summary>
         /// Clase Vendas serve para instanciar um novo produto a venda
         /// </summary>

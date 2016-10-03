@@ -8,11 +8,18 @@ namespace eCommerceS2B_2016.Models
 {
     public class Compras
     {
+        /// <summary>
+        /// ////////////////////////
+        /// </summary>
+        /// <param name="venda"></param>
+        /// <param name="comprador"></param>
         #region "Atributos"
 
         #endregion
 
         #region "Construtores"
+        public Compras() { }
+
         public Compras(Vendas venda, User comprador)
         {
             this.DataDaCompra = DateTime.Now;

@@ -14,11 +14,10 @@ namespace eCommerceS2B_2016.Models
     {
         #region "Atributos"
         public enum qualificacao { Negativo, Neutro, Positivo};
-        public List<Vendas> vendas;
-        public List<Compras> compras;
         #endregion
 
         #region "Construtor"
+        public User(): base() { }
         public User(string nome, string sobrenome, string cpf, string login, string senha) : base(nome, sobrenome, cpf, login, senha)
         {
             NroCompras = 0;
@@ -44,8 +43,8 @@ namespace eCommerceS2B_2016.Models
 
         public qualificacao Rating { get; private set; }
 
-        public List<Compras> ListaDeCompras { get; }
-        public List<Vendas> ListaDeVendas { get; }
+        public IList<Compras> ListaDeCompras { get; set; }
+        public IList<Vendas> ListaDeVendas { get; set; }
 
 
         #endregion
@@ -81,13 +80,13 @@ namespace eCommerceS2B_2016.Models
         //Serve para adicionar uma venda na sua List de vendas
         public void NovaVenda(Vendas nova)
         {
-            vendas.Add(nova);
+            //vendas.Add(nova);
         }
 
         //Serve para adcionar uma nova compra na sua List de compras
         public void NovaCompra(Compras nova)
         {
-            compras.Add(nova);
+            //compras.Add(nova);
         }
         #endregion
         

@@ -15,6 +15,8 @@ namespace eCommerceS2B_2016.Models
         #endregion
 
         #region "Construtores"
+        public Produto() { }
+
         /// <summary>
         /// Classe Produto serve para instanciar um produto - Produto ira servir para as classes Compras e Vendas
         /// </summary>

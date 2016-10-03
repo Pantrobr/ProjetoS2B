@@ -15,6 +15,7 @@ namespace eCommerceS2B_2016.Models
         #endregion
 
         #region "Construtores"
+        public Pessoa() { }
         /// <summary>
         /// Classe Pessoa é abstrata e define os elementos básicos que um registro de usuario ou administrador deve ter
         /// </summary>
