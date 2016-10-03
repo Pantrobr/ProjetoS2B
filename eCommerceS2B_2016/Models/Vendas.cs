@@ -14,6 +14,10 @@ namespace eCommerceS2B_2016.Models
 
         #region "Construtores"
         public Vendas() { }
+        public Vendas(string desc)
+        {
+            this.Description = desc;
+        }
         /// <summary>
         /// Clase Vendas serve para instanciar um novo produto a venda
         /// </summary>
@@ -21,10 +25,10 @@ namespace eCommerceS2B_2016.Models
         /// <param name="vendedor">Recebe um User</param>
         /// <param name="desc">Descrição da venda até 25 caracteres</param>
         /// <param name="local"></param>
-        public Vendas(Produto produto, User vendedor, string desc, string local)
+        public Vendas(int produto, int vendedor, string desc, string local)
         {
-            this.IdProduto = produto.ProdutoID;
-            this.IdVendedor = vendedor.UserID;
+            this.IdProduto = produto;
+            this.IdVendedor = vendedor;
             this.Status = true;
             this.Description = desc;
             this.DataDaPostagem = DateTime.Now;
@@ -33,7 +37,7 @@ namespace eCommerceS2B_2016.Models
         #endregion
 
         #region "Propriedades"
-        [Key]
+       
         public int VendasID { get; set; }
 
         public int IdProduto { get; private set; }
