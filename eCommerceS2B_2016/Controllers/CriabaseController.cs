@@ -29,8 +29,7 @@ namespace eCommerceS2B_2016.Controllers
                 ctx.Usuarios.Add(user);
                 ctx.Usuarios.Add(user1);
                 ctx.SaveChanges();
-                user.NovaVenda("Toalha de Banho", "Porto Alegre", 12.2m, Genero.Outros);
-                user1.NovaVenda("Lapis vermelho", "Canoas",2.2m,Genero.Outros);
+                
 
             }
             return "Base criada!";

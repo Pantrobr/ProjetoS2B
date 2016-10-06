@@ -75,9 +75,15 @@ namespace eCommerceS2B_2016.Models
         }
 
         //Serve para adicionar uma venda na sua List de vendas
-        public void NovaVenda(string descricaoProduto, string localVenda, decimal valorProduto, Genero gen)
+        public void NovaVenda(string descricaoProduto, string localVenda, string descVenda, decimal valorProduto, Genero gen)
         {
-            
+            Produto produto = new Produto(this.UserID, gen, descricaoProduto, valorProduto);
+            ProdutosContext ctx = new ProdutosContext();
+            ctx.Produtos.Add(produto);
+            ctx.SaveChanges();
+            Vendas venda = new Vendas(produto.ProdutoID, this.UserID, descVenda, localVenda);
+            ctx.Vendas.Add(venda);
+            ctx.SaveChanges();
         }
 
         //Serve para adcionar uma nova compra na sua List de compras

@@ -24,9 +24,9 @@ namespace eCommerceS2B_2016.Models
         /// <param name="genero">Um Genero é um tipo enum descrito no neste namespace</param>
         /// <param name="descr">String com a descrição do produto</param>
         /// <param name="valor">Recebe um decimal com o valor</param>
-        public Produto(Usuarios vendedor, Genero genero, string descr, decimal valor)
+        public Produto(int vendedor, Genero genero, string descr, decimal valor)
         {
-            this.IdVendedor = vendedor.UserID;
+            this.IdVendedor = vendedor;
             this.GeneroProduto = genero;
             this.Description = descr;
             this.Valor = valor;
