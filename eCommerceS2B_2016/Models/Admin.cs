@@ -33,9 +33,5 @@ namespace eCommerceS2B_2016.Models
             loginDatas.Add(DateTime.Now);
         }
         #endregion
-        public void administrados()
-        {
-
-        }  
     }
 }
