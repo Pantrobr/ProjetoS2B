@@ -68,6 +68,6 @@ namespace eCommerceS2B_2016.Models
             IdComprador = comprador.UserID;
         }
         #endregion
-
+        //
     }
 }
