@@ -24,7 +24,7 @@ namespace eCommerceS2B_2016.Models
         /// <param name="genero">Um Genero é um tipo enum descrito no neste namespace</param>
         /// <param name="descr">String com a descrição do produto</param>
         /// <param name="valor">Recebe um decimal com o valor</param>
-        public Produto(User vendedor, Genero genero, string descr, decimal valor)
+        public Produto(Usuarios vendedor, Genero genero, string descr, decimal valor)
         {
             this.IdVendedor = vendedor.UserID;
             this.GeneroProduto = genero;
@@ -36,7 +36,6 @@ namespace eCommerceS2B_2016.Models
         #region "Propriedades"
         [Key]
         public int ProdutoID { get; set; }
-        public byte[] Imagem { get; set; }
         public int IdVendedor { get; set; }
         public Genero GeneroProduto { get; set; }
         public string Description { get; set; }
@@ -45,7 +44,7 @@ namespace eCommerceS2B_2016.Models
         [Range(0.01,100.0,ErrorMessage ="Valor deve estar entre R$ 0,01 e R$ 100,00")]
         public decimal Valor { get; set; }
 
-
+        public ICollection<Arquivo> Arquivos { get; set; }
         #endregion
 
         #region "Métodos"

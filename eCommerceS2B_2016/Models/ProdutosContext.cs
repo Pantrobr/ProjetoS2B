@@ -11,9 +11,10 @@ namespace eCommerceS2B_2016.Models
     {
         public ProdutosContext() : base() { }
 
-        public DbSet<User> Usuarios { get; set; }
+        public DbSet<Usuarios> Usuarios { get; set; }
         public DbSet<Vendas> Vendas { get; set; }
         public DbSet<Produto> Produtos { get; set; }
         public DbSet<Compras> Compras { get; set; }
+        public DbSet<Arquivo> Arquivos { get; set; }
     }
 }

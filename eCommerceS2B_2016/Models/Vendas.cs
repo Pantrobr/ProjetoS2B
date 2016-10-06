@@ -25,13 +25,12 @@ namespace eCommerceS2B_2016.Models
         /// <param name="vendedor">Recebe um User</param>
         /// <param name="desc">Descrição da venda até 25 caracteres</param>
         /// <param name="local"></param>
-        public Vendas(int produto, int vendedor, string desc, string local)
+        public Vendas(Produto produto, int vendedor, string desc, string local)
         {
-            this.IdProduto = produto;
+            this.IdProduto = produto.ProdutoID;
             this.IdVendedor = vendedor;
             this.Status = true;
             this.Description = desc;
-            this.DataDaPostagem = DateTime.Now;
             this.Local = local;
         }
         #endregion
@@ -62,7 +61,7 @@ namespace eCommerceS2B_2016.Models
         #region "Métodos"
 
         //Serve para vender ela muda o estatus da venda e guarda o id do comprador e a data da compra
-        public void Vendeu(User comprador)
+        public void Vendeu(Usuarios comprador)
         {
             this.Status = false;
             this.DataDaVenda = DateTime.Now;

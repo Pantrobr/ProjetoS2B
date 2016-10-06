@@ -4,11 +4,10 @@ using System.Linq;
 using System.Web;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel;
-using System.Data.Entity;
 
 namespace eCommerceS2B_2016.Models
 {
-    public abstract class Pessoa : DbContext
+    public class Pessoa 
     {
         #region "Atributos"
 

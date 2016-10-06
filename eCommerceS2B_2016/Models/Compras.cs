@@ -20,7 +20,7 @@ namespace eCommerceS2B_2016.Models
         #region "Construtores"
         public Compras() { }
 
-        public Compras(Vendas venda, User comprador)
+        public Compras(Vendas venda, Usuarios comprador)
         {
             this.DataDaCompra = DateTime.Now;
             this.IdComprador = comprador.UserID;

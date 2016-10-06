@@ -1,0 +1,106 @@
+﻿@model eCommerceS2B_2016.Models.Usuarios
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Usuarios</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Imagem)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Imagem)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NroVendas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NroVendas)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NroCompras)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NroCompras)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NroLikes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NroLikes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NroDislikes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NroDislikes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Rating)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Rating)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sobrenome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sobrenome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CPF)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CPF)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Login)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Login)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Senha)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Senha)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.UserID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

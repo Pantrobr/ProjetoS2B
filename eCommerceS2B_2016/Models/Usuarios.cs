@@ -7,18 +7,16 @@ using System.ComponentModel;
 
 namespace eCommerceS2B_2016.Models
 {
-    /// <summary>
-    /// Classe serve para instanciar um usuário que podera comprar ou vender produtos
-    /// </summary>
-    public class User : Pessoa
+    
+    public class Usuarios : Pessoa
     {
         #region "Atributos"
         public enum qualificacao { Negativo, Neutro, Positivo};
         #endregion
 
         #region "Construtor"
-        public User(): base() { }
-        public User(string nome, string sobrenome, string cpf, string login, string senha) : base(nome, sobrenome, cpf, login, senha)
+        public Usuarios(): base() { }
+        public Usuarios(string nome, string sobrenome, string cpf, string login, string senha) : base(nome, sobrenome, cpf, login, senha)
         {
             NroCompras = 0;
             NroVendas = 0;
@@ -29,10 +27,10 @@ namespace eCommerceS2B_2016.Models
         #endregion
 
         #region "Propriedades"
-        public byte[] Imagem { get; set; }
-
         [Key]
         public int UserID { get; set; }
+
+        public Arquivo Avatar { get; set; }
 
         public int NroVendas { get; set; }
 
@@ -45,7 +43,6 @@ namespace eCommerceS2B_2016.Models
 
         public IList<Compras> ListaDeCompras { get; set; }
         public IList<Vendas> ListaDeVendas { get; set; }
-
 
         #endregion
 
@@ -78,16 +75,22 @@ namespace eCommerceS2B_2016.Models
         }
 
         //Serve para adicionar uma venda na sua List de vendas
-        public void NovaVenda(Vendas nova)
+        public void NovaVenda(string descricaoProduto, string localVenda, decimal valorProduto, Genero gen)
         {
-            //vendas.Add(nova);
+            
         }
 
         //Serve para adcionar uma nova compra na sua List de compras
-        public void NovaCompra(Compras nova)
+        public void NovaCompra(Vendas nova)
         {
-            //compras.Add(nova);
+            Compras compra = new Compras(nova, this);
+            this.ListaDeCompras.Add(compra);
+            ProdutosContext ctx = new ProdutosContext();
+            ctx.Compras.Add(compra);
+            ctx.SaveChanges();
         }
+
+        
         #endregion
         
 

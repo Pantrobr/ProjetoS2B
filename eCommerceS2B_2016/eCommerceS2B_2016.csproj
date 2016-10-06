@@ -159,16 +159,35 @@
     <Compile Include="Controllers\CriabaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProdutoesController.cs" />
+    <Compile Include="Controllers\UsuariosController.cs" />
     <Compile Include="Controllers\VendasController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201610052308076_InitialCreate.cs" />
+    <Compile Include="Migrations\201610052308076_InitialCreate.Designer.cs">
+      <DependentUpon>201610052308076_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610060453346_atualizacao1.cs" />
+    <Compile Include="Migrations\201610060453346_atualizacao1.Designer.cs">
+      <DependentUpon>201610060453346_atualizacao1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610060636472_atualizaçao2.cs" />
+    <Compile Include="Migrations\201610060636472_atualizaçao2.Designer.cs">
+      <DependentUpon>201610060636472_atualizaçao2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610060706058_atualizaçao21.cs" />
+    <Compile Include="Migrations\201610060706058_atualizaçao21.Designer.cs">
+      <DependentUpon>201610060706058_atualizaçao21.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Admin.cs" />
+    <Compile Include="Models\Arquivo.cs" />
     <Compile Include="Models\Compras.cs" />
     <Compile Include="Models\Pessoa.cs" />
     <Compile Include="Models\Produto.cs" />
     <Compile Include="Models\ProdutosContext.cs" />
-    <Compile Include="Models\User.cs" />
+    <Compile Include="Models\Usuarios.cs" />
     <Compile Include="Models\Vendas.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -222,6 +241,11 @@
     <Content Include="Views\Vendas\Details.cshtml" />
     <Content Include="Views\Vendas\Edit.cshtml" />
     <Content Include="Views\Vendas\Index.cshtml" />
+    <Content Include="Views\Usuarios\Create.cshtml" />
+    <Content Include="Views\Usuarios\Delete.cshtml" />
+    <Content Include="Views\Usuarios\Details.cshtml" />
+    <Content Include="Views\Usuarios\Edit.cshtml" />
+    <Content Include="Views\Usuarios\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -234,6 +258,20 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201610052308076_InitialCreate.resx">
+      <DependentUpon>201610052308076_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610060453346_atualizacao1.resx">
+      <DependentUpon>201610060453346_atualizacao1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610060636472_atualizaçao2.resx">
+      <DependentUpon>201610060636472_atualizaçao2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610060706058_atualizaçao21.resx">
+      <DependentUpon>201610060706058_atualizaçao21.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

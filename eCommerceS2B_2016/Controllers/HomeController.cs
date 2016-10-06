@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using eCommerceS2B_2016.Models;
-using Usuario = eCommerceS2B_2016.Models.User;
+using Usuario = eCommerceS2B_2016.Models.Usuarios;
 
 namespace eCommerceS2B_2016.Controllers
 {
