@@ -83,9 +83,15 @@ namespace ProjetoS2B.Models
         }
 
         //Serve para adicionar uma venda na sua List de vendas
-        public void NovaVenda(string descricaoProduto, string localVenda, string descVenda, decimal valorProduto, Genero gen)
+        public void NovaVenda(string descricaoProduto, decimal valorProduto, Genero gen, int idVendedor)
         {
-
+            var db = new DataBaseContext();
+            var produto = new Produto(idVendedor, gen, descricaoProduto, valorProduto);
+            produto.Disponivel = true;
+            var produtoDb = db.Produtos.Create();
+            produtoDb = produto;
+            db.Produtos.Add(produtoDb);
+            db.SaveChanges();
         }
 
         //Serve para adcionar uma nova compra na sua List de compras

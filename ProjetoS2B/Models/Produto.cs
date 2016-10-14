@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel;
 
 namespace ProjetoS2B.Models
 {
@@ -38,6 +39,7 @@ namespace ProjetoS2B.Models
         public int ProdutoID { get; set; }
         public int IdVendedor { get; set; }
         public Genero GeneroProduto { get; set; }
+        [DisplayName("Produto")]
         public string Description { get; set; }
         public bool Disponivel { get; set; }
 
