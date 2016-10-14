@@ -28,6 +28,23 @@
         </div>
     </div>
     <div class="container body-content">
+
+        <!--Links para criar logar ou deslogar-->
+        <div style="width:auto; background-color: rgba(248, 237, 237, 0.34);">
+            @if (Session["UserID"] != null)
+            {
+                <strong>@Html.Encode(Session["Login"])</strong>
+                @Html.ActionLink("Log Out", "LogOut", "UserLogin")
+            }
+            else
+            {
+                @Html.ActionLink("Cria Usuario", "Registro", "UserLogin")
+                <span> | </span>
+                @Html.ActionLink("Log In", "LogIn", "UserLogin")
+            }
+        </div>
+
+
         @RenderBody()
         <hr />
         <footer>

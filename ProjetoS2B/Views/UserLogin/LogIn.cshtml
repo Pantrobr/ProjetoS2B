@@ -1,0 +1,28 @@
+﻿@model ProjetoS2B.Models.Usuario
+
+@{
+    ViewBag.Title = "LogIn";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true, "Falha no Login. Usuário ou Senha inválidos.");
+    <div>
+        <fieldset>
+            <legend>Tela de Login</legend>
+            <div>@Html.LabelFor(u => u.Login)</div><br />
+            <div>
+                @Html.TextBoxFor(u => u.Login)
+            @Html.ValidationMessageFor(u => u.Login)
+        </div>
+
+        <div>@Html.LabelFor(u => u.Senha)</div><br />
+        <div>
+            @Html.PasswordFor(u => u.Senha)
+        @Html.ValidationMessageFor(u => u.Senha)
+    </div>
+    <br />
+    <input type="submit" value="Log In" />
+</fieldset>
+</div>
+}
